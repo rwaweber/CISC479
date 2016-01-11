@@ -1,0 +1,180 @@
+
+
+.frame {
+    float: left;
+    position: relative;
+    width: 30%;
+}
+
+/* ################################################# */
+
+.firstattempt {
+    border: 5px solid gray;
+    width: 200%;
+    height: 5in;
+    background: #14205F;
+    background: blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #1467AD , #070C6E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #1467AD, #070C6E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #1467AD, #070C6E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #1467AD , #070C6E); /* Standard syntax */ 
+}
+
+.eheader {
+    display: none;
+}
+
+.top_logo {
+    background-color: #e3e0e0;
+    height: 120px;
+    width: 100%;
+    border-radius: 0% 0% 45% 45% / 10% 10% 100% 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* vicks tablet */
+.top_logo p {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7em;
+    height: 70%;
+    text-align: center;
+    align-items: center;
+    
+    background: #10462D; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient( #10462D , #227658); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#227658, #10462D); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#227658, #10462D); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#227658, #10462D); /* Standard syntax */ 
+    
+    color: white;
+    border-radius: 60% 60% 200% 200%;
+    /* -moz-border-radius: 50% 50% 300% 300%; */
+}
+
+.annoyinglogo {
+    /*   font stretch property 
+    is not supported in any 
+    current browsers, but would've been very nice to get the 'vicks'
+    phrase to stretch across the pill-shaped logo
+    */
+    /*     font-stretch: 'expanded'; */
+    font-size: 36; 
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: 22%;
+}
+
+/* ################################################# */
+
+/* primary flex container */
+.cen_logo {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+}
+
+/* really great for teasing out the individual flex boxes */
+.cen_logo div {
+/*     background: goldenrod; */
+/*     border: 2px solid black; */
+    font-family: 'Raleway', sans-serif;
+}
+
+.headline {
+    color: white;
+    font-size: 110; 
+}
+
+.headline p {
+    margin-top: -15px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-shadow: 2px 2px 8px #000000;
+    
+}
+
+.arrow_progression {
+    text-align: right;
+    font-size: 90; 
+  
+}
+
+.arrow_progression p {
+    margin-top: -55px;
+    margin-bottom: -20px;
+    margin-right: 80px;
+    font-family: 'Karla', sans-serif;
+/*   Would've liked to add some gradient font coloring here   */
+    color: lightblue;
+    text-shadow: 2px 2px 8px lightblue;    
+}
+
+.medicine_class {
+    text-align: center;
+
+    
+    font-size: 35;
+    
+}
+
+.medicine_class p {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;    
+    
+    border-radius: 25% 25% 0% 0%;
+    color: white;
+    background: #2FA3D8;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.specification p {
+    font-size: 26;
+    font-family: 'Karla', sans-serif;
+    border-radius: 0% 0% 0% 0%;
+    background: linear-gradient(to right, #1467AD , #070C6E);;
+
+}
+
+.bot_description {
+    color: white;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 16;           
+}
+
+.symptom_listing {
+    text-align: center;
+    width: 80%;
+    font-family: 'Lato', sans-serif;
+    font-size: 21;
+    margin-top: 0px;
+}
+
+.symptom_listing li {
+    margin-left: 120px;
+    text-align: left;
+}
+
+
+
+/* ################################################# */
+
+
+.goalimage {
+    float: none;
+    position: relative;
+    width: 30%;
+}
+
+
+
+img {
+    width: 200%;
+    height: 6in;
+}
