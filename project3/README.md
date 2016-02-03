@@ -1,1 +1,2 @@
-The idea of this project setup is to have a folder of all of your collected styles from your years of experience.  Then for the particular project you make one file (or many) which assigns the semantic tag selectors to the visual classes to extend.
+# boilerplate-stylus
+With a SMACSS twist, inspired by Sassy-Starter

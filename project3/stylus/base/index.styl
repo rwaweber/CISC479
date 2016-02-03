@@ -1,0 +1,50 @@
+@import 'normalize';
+@import 'base';
+
+rearrange-layout()
+
+// move sidebar to direction
+adjust-sidebar(direction)
+    if direction == right
+        .intro, .main
+            float: left
+        .sidebar
+            float: direction
+            margin-left: 75%
+    else if direction == left 
+        .intro, .main
+            float: right
+            margin-left: 50%
+        .sidebar
+            float: direction
+            margin-right: 75%
+
+// colors arranged from outside in, last is the font color
+colorize(timeofday)
+    m_colors = #FFC914, #1B2E4A, #1B2E4A, #1B2E4A,#1B2E4A, white, 65deg
+    d_colors = #F7D300, #018FD8, #018FD8, #018FD8, #018FD8, white, 120deg
+    e_colors = #DBB445, #EF881A, #EF881A, #EF881A, #221445, white,  245deg
+    n_colors = #3B3554, #0F0B1D, #0F0B1D, #0F0B1D, #0F0B1D, white, 310deg
+    if timeofday == morning
+        colorarray = m_colors
+    else if timeofday == day
+        colorarray = d_colors
+    else if timeofday == evening
+        colorarray = e_colors
+    else if timeofday == night
+        colorarray = n_colors
+    .intro, .main, .sidebar
+        color: colorarray[5]
+    body
+        background: linear-gradient(colorarray[6], colorarray[0], colorarray[1], colorarray[2], colorarray[3], colorarray[4])
+        background-attachment: fixed    
+
+build_layout(timeofday)
+    if timeofday == day || timeofday == morning
+        adjust-sidebar(right)
+    else if timeofday == evening || timeofday == night
+        adjust-sidebar(left)
+    colorize(timeofday)
+    
+    
+
