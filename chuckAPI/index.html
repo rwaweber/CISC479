@@ -1,0 +1,21 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Forgot about this!
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script type="text/javascript">
+
+      
+
+      var myDB = new Firebase('https://scorching-heat-6301.firebaseio.com/');
+      //var myDB = new Firebase('http://bechdeltest.com/api/v1/getMoviesByTitle?title');
+      myDB.on("value", function(snapshot){
+      var theData = snapshot.val();
+      document.body.innerHTML = JSON.stringify(theData);
+      });
+
+    </script>
+  </body>
+</html>
