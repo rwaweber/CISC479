@@ -1,0 +1,129 @@
+.statusbar {
+  position: relative;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+footer {
+  position: fixed;
+  padding: 1%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.press {
+  box-shadow: 0px 0px 0px 2px #9fb4f2;
+  background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  background-color: #7892c2;
+  border-radius: 10px;
+  border: 1px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 3px 3px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+  margin: 0.5%;
+}
+.press:hover {
+  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  background-color: #476e9e;
+}
+.query-result {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 25px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px 1px #000;
+}
+.title-div {
+  color: #000;
+  text-align: center;
+  padding: 25px;
+  font-size: 2em;
+}
+.info-div {
+  margin: 15px;
+  color: #000;
+  font-size: 0.75em;
+}
+html {
+  background-image: url("img/congruent_pentagon.png");
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+div[data-page=template] {
+  display: none;
+}
+.statusbar {
+  background: rgba(30,30,30,0.1);
+}
+.statusbar > span {
+  margin: 1%;
+}
+.hidetillogin {
+  display: none;
+}
+#penguin {
+  text-align: center;
+}
+footer {
+  background: #90ee90;
+}
+.post-form {
+  margin: auto;
+  text-align: center;
+}
+.info {
+  margin: 1%;
+  text-align: center;
+}
+.meat {
+  border: 1px solid #000;
+  background: #fff;
+  padding: 10px;
+}
+.falsePostContent {
+  margin: auto;
+  padding: 1%;
+  background: #fff;
+  border: 1px solid #ededed;
+  width: 80%;
+}
+.toplvl-results {
+  margin: 10px;
+  padding: 10px;
+  height: 90%;
+  overflow-x: hidden;
+}
+.toplvl-results :hover {
+  background: rgba(30,30,30,0.15);
+}
+.query-result {
+  background: #fff;
+  color: #000;
+}
+#tired {
+  margin-left: 25px;
+}
+#falsePostAuthor {
+  font-size: 36px;
+}
+#falsePostDate {
+  font-size: 28px;
+}
+#falsePostTitle {
+  font-size: 34px;
+}
+.falsePostContent {
+  font-size: 22px;
+  margin-bottom: 5%;
+}
