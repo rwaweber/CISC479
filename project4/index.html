@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html>
-    <header>   
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="style.css">
-    </header>
-    <body>
+<header>
+    <meta charset="utf-8" />
+<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+<script type="text/javascript" src="js/submit.js"></script>
+<script type="text/javascript" src="js/multipage.js"></script>
+<script type="text/javascript" src="js/retrieve.js"></script>
+<script type="text/javascript" src="js/markdown.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <div class="statusbar">
+        <span id="words">Please login using Github</span>
+        <button class="hideafterlogin press" onclick="login()">login</button>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <button class="hidetillogin press" onclick="showSearchPage()">search</button>
+        <!--<button class="hidetillogin" onclick="showHomePage()">WRITE POST</button>-->
+    </div>
+</header>
+
+<body>
+
+    <!--Login Page-->
+    <div data-page="content" id="display">
+    </div>
+    <div data-page="template" id="page1">
+        <p id="penguin">To use this site, you must login with your Github Account.</p>
+    </div>
+
+    <!--DashBoard-->
+    <div data-page="template" id="page2">
+        <h3 id='tired'>HOME PAGE</h3>
+        <div class="post-form">
+            <form id="primaryForm">
+                <h4 id="purpose">
+                    This is the landing page, where you can choose to create a blog post, that will be viewable to the world through a unique link. 
+                </h4>
+                <label for="title">Title:</label>
+                <input type="text" class="postTitle">
+                <label>
+                    <input type="checkbox" class="md_decision" /> Markdown?
+                </label>
+                <p>
+                    <textarea class="meat" rows="10" cols="80"></textarea>
+                </p>
+            </form>
+            <button type="submit" class='clickable press' id="sendPost" onclick="send_post()">submit</button>
+            <button type="submit" class='button press' id="view" onclick="raw_trigger()">Raw JSON & HTML view</button>
+        </div>
+        <div class="results"></div>
+        <div data-page="content" id="display">
+        </div>
+    </div>
+
+    <!--Search Page-->
+    <div data-page="template" id="page3">
         <div class="post-form">
             <label for="name">Sort By Name or Date (mm/dd/yy):</label>
             <input type="text" class="username" id="nameInput">
-            <button class='press' id="submissionButton">Find</button> 
-            <!--<button type="submit" class='button' id="removeButton">Retrieve</button>-->
+            <button class='press' id="submissionButton" onclick="query_trigger()">find</button>
+        </div>
+        <div class='info'>
+            Click on results to take you to that post.
         </div>
         <div class="toplvl-results"></div>
-    </body>
-    
-    <footer id='test'>   
-        Made By Will and Pat
-    </footer>
-    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
-    <script type="text/javascript" src="js/submit.js"></script>
-    <script type="text/javascript" src="js/retrieve.js"></script>
-    <!--<script type="text/javascript" src="../js/submit.js"></script>-->
+        <button class="press" onclick="showPrevPage()">home</button>
+    </div>
+
+    <!--empty page for posts-->
+    <div data-page="template" id="page4">
+        <button class="press" onclick="showPrevPage()">back</button>
+
+        <div class="info">
+            <div id='falsePostAuthor'> </div>
+            <div id='falsePostDate'> </div>
+            <div id='falsePostTitle'> </div>
+        </div>
+        <div class="falsePostContent">
+        </div>
+    </div>
+</body>
+
+<footer>
+    Made By <a href="https://github.com/rwaweber">Will</a> and <a href="https://github.com/huffstler">Pat</a>
+</footer>
+
 </html>
