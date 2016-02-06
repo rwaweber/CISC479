@@ -1,4 +1,4 @@
-// handling most of the page routing
+// handling most of the page 'routing'
 // esp since we're going for a single page app type of style
 
 var pages = ['page1', 'page2', 'page3', 'page4'];
